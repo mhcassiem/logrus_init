@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func init_logger() {
+func Init_logger() *logrus.Logger{
 	log := &logrus.Logger{
 		Out:   os.Stderr,
 		Level: logrus.DebugLevel,
@@ -16,4 +16,5 @@ func init_logger() {
 			ForceFormatting: true,
 		},
 	}
+	return log
 }
